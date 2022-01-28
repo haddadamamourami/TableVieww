@@ -16,30 +16,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="isF-AH-Dz6">
-                                <rect key="frame" x="82" y="306.5" width="250" height="293.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="55" translatesAutoresizingMaskIntoConstraints="NO" id="nPC-zQ-CnE">
+                                <rect key="frame" x="57" y="200.5" width="300" height="395.5"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rent" translatesAutoresizingMaskIntoConstraints="NO" id="N6Z-aN-beL">
-                                        <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="slider5" translatesAutoresizingMaskIntoConstraints="NO" id="xD8-GV-hv7">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
+                                        <color key="tintColor" red="0.94509803920000002" green="0.94509803920000002" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="250" id="Bqf-92-0w7"/>
-                                            <constraint firstAttribute="height" constant="250" id="qnD-mW-rb8"/>
+                                            <constraint firstAttribute="height" constant="300" id="nbV-g9-vtV"/>
+                                            <constraint firstAttribute="width" constant="300" id="pdw-pG-Z21"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to App" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JE2-Eq-ITw">
-                                        <rect key="frame" x="17" y="253" width="216" height="40.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SeeBeyonD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JE2-Eq-ITw">
+                                        <rect key="frame" x="78.5" y="355" width="143.5" height="40.5"/>
                                         <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="31"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="JE2-Eq-ITw" firstAttribute="top" secondItem="xD8-GV-hv7" secondAttribute="bottom" constant="55" id="71l-dD-r4A"/>
+                                    <constraint firstAttribute="trailing" secondItem="xD8-GV-hv7" secondAttribute="trailing" id="F5m-nu-4iQ"/>
+                                    <constraint firstItem="xD8-GV-hv7" firstAttribute="top" secondItem="nPC-zQ-CnE" secondAttribute="top" id="KlP-N3-soo"/>
+                                    <constraint firstItem="xD8-GV-hv7" firstAttribute="leading" secondItem="nPC-zQ-CnE" secondAttribute="leading" id="mRg-fu-wgV"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="isF-AH-Dz6" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="mP8-G4-hAN"/>
-                            <constraint firstItem="isF-AH-Dz6" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="waa-0I-nsA"/>
+                            <constraint firstItem="nPC-zQ-CnE" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="GIi-If-4Lz"/>
+                            <constraint firstItem="nPC-zQ-CnE" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="-50" id="awl-Vj-lP8"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -49,8 +56,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="rent" width="3000" height="2000"/>
-        <systemColor name="systemBackgroundColor">
+        <image name="slider5" width="520" height="514"/>
+        <systemColor name="secondarySystemGroupedBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>

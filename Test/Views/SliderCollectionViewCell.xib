@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SliderCollectionViewCell" id="wze-Um-GX8" customClass="SliderCollectionViewCell" customModule="Test" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="671"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" insetsLayoutMarginsFromSafeArea="NO" id="Fma-cD-5lB">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="671"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="akS-Ys-qcp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="584"/>
+                    </imageView>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="SJF-Tx-xvj">
+                        <rect key="frame" x="16" y="584" width="382" height="71"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Best rent application for you" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="34q-Fr-Wix">
+                                <rect key="frame" x="0.0" y="0.0" width="382" height="37"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You can rent the best place with the best price" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q9F-Af-UzJ">
+                                <rect key="frame" x="0.0" y="53" width="382" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" systemColor="systemGray2Color"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="34q-Fr-Wix" firstAttribute="top" secondItem="SJF-Tx-xvj" secondAttribute="top" id="3bj-3y-khP"/>
+                            <constraint firstItem="Q9F-Af-UzJ" firstAttribute="leading" secondItem="SJF-Tx-xvj" secondAttribute="leading" id="Fv5-GG-KnG"/>
+                            <constraint firstAttribute="trailing" secondItem="34q-Fr-Wix" secondAttribute="trailing" id="L7o-Up-Ifb"/>
+                            <constraint firstAttribute="bottom" secondItem="Q9F-Af-UzJ" secondAttribute="bottom" id="Yjt-Zx-g48"/>
+                            <constraint firstAttribute="trailing" secondItem="Q9F-Af-UzJ" secondAttribute="trailing" id="ecS-jM-WLL"/>
+                            <constraint firstItem="Q9F-Af-UzJ" firstAttribute="top" secondItem="34q-Fr-Wix" secondAttribute="bottom" constant="16" id="tVz-0V-d9s"/>
+                            <constraint firstItem="34q-Fr-Wix" firstAttribute="leading" secondItem="SJF-Tx-xvj" secondAttribute="leading" id="uDP-P9-r4d"/>
+                        </constraints>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="akS-Ys-qcp" firstAttribute="top" secondItem="Fma-cD-5lB" secondAttribute="top" id="0yy-d9-84N"/>
+                    <constraint firstItem="SJF-Tx-xvj" firstAttribute="top" secondItem="akS-Ys-qcp" secondAttribute="bottom" id="J3m-Yj-wml"/>
+                    <constraint firstAttribute="trailing" secondItem="akS-Ys-qcp" secondAttribute="trailing" id="KTe-7R-OU0"/>
+                    <constraint firstAttribute="trailing" secondItem="SJF-Tx-xvj" secondAttribute="trailing" constant="16" id="KZN-pZ-olp"/>
+                    <constraint firstAttribute="bottom" secondItem="SJF-Tx-xvj" secondAttribute="bottom" constant="16" id="MCb-jK-rm5"/>
+                    <constraint firstItem="SJF-Tx-xvj" firstAttribute="leading" secondItem="Fma-cD-5lB" secondAttribute="leading" constant="16" id="W0m-ga-kut"/>
+                    <constraint firstItem="akS-Ys-qcp" firstAttribute="leading" secondItem="Fma-cD-5lB" secondAttribute="leading" id="yKw-7q-Jlg"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="414" height="671"/>
+            <connections>
+                <outlet property="slideDescriptionLabel" destination="Q9F-Af-UzJ" id="hyg-5T-Kom"/>
+                <outlet property="slideImageView" destination="akS-Ys-qcp" id="co9-03-7Qp"/>
+                <outlet property="slideTitleLabel" destination="34q-Fr-Wix" id="jKF-Uy-cqM"/>
+            </connections>
+            <point key="canvasLocation" x="130" y="-19"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

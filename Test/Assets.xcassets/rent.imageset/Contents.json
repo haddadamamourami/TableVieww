@@ -1,11 +1,11 @@
 {
   "images" : [
     {
+      "filename" : "rent.jpg",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "rent.jpg",
       "idiom" : "universal",
       "scale" : "2x"
     },

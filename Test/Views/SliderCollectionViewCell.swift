@@ -9,9 +9,6 @@ import UIKit
 
 class SliderCollectionViewCell: UICollectionViewCell {
     
-    static let identifier = String(describing: SliderCollectionViewCell.self)
-    
-    
     @IBOutlet weak var slideImageView: UIImageView!
     
     @IBOutlet weak var slideTitleLabel: UILabel!

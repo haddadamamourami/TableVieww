@@ -20,7 +20,7 @@ class SliderViewController: UIViewController {
     var currentPage = 0 {
         didSet {
             pageControl.currentPage = currentPage
-            if currentPage == slides.count-1 {
+            if currentPage == slides.count - 1 {
                 nextButton.setTitle("Get started", for: .normal)
             } else {
                 nextButton.setTitle("Next", for: .normal)
@@ -33,19 +33,22 @@ class SliderViewController: UIViewController {
 
        slides = [
         
-        Slide(title: "The best rantig app", description: "Rent anywhere you want with good price", image: #imageLiteral(resourceName: "slide2")),
         Slide(title: "The best rantig app", description: "Rent anywhere you want with good price", image: #imageLiteral(resourceName: "rent")),
-        Slide(title: "The best rantig app", description: "Rent anywhere you want with good price", image: #imageLiteral(resourceName: "slide1"))
+        Slide(title: "The best rantig app", description: "Rent anywhere you want with good price", image: #imageLiteral(resourceName: "rent")),
+        Slide(title: "The best rantig app", description: "Rent anywhere you want with good price", image: #imageLiteral(resourceName: "slider5"))
 
         
        ]
+        pageControl.numberOfPages = slides.count
         
+        registerCells()
+
     }
     
 
     @IBAction func nextBtnClicked(_ sender: UIButton) {
-        if currentPage == slides.count-1 {
-            let controller = storyboard? .instantiateViewController(withIdentifier: "HomeSC") as! UINavigationController
+        if currentPage == slides.count - 1 {
+            let controller = storyboard?.instantiateViewController(withIdentifier: "HomeSC") as! UINavigationController
             controller.modalPresentationStyle = .fullScreen
             controller.modalTransitionStyle = .flipHorizontal
             present(controller, animated: true, completion: nil)
@@ -64,9 +67,16 @@ extension SliderViewController: UICollectionViewDelegate,UICollectionViewDataSou
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return slides.count
     }
-    
+    func registerCells()
+        {
+            let sliderCollectionViewCell = UINib(nibName: SliderCollectionViewCell.reuseIdentifier, bundle: nil)
+            collectionView.register(sliderCollectionViewCell, forCellWithReuseIdentifier: SliderCollectionViewCell.reuseIdentifier)
+        }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SliderCollectionViewCell.identifier, for: indexPath) as! SliderCollectionViewCell
+        guard
+            indexPath.row < 3,
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SliderCollectionViewCell.reuseIdentifier, for: indexPath) as? SliderCollectionViewCell
+        else { return UICollectionViewCell() }
         
         cell.setup(slides[indexPath.row])
         return cell
