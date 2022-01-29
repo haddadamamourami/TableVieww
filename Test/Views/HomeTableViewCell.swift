@@ -8,16 +8,8 @@
 import UIKit
 
 class HomeTableViewCell: UITableViewCell {
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    func setupCell(using dummyData: String) {
+        self.textLabel?.text = dummyData
+        self.textLabel?.textAlignment = .center
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
 }
